@@ -1,2 +1,2 @@
 # BMIGraphDrawer
- A program that converts BMI values into graph
+ A code that converts BMI values into graph
