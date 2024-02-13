@@ -14,11 +14,12 @@ def calculateBMI():
         messagebox.showinfo(title="Error!", message="Enter valid values")
 
 def addPeople():
-    name_list.append(nameEntry.get())
-    bmi_list.append(calculateBMI())
-    nameEntry.delete(0, tkinter.END)
-    heightEntry.delete(0, tkinter.END)
-    weightEntry.delete(0, tkinter.END)
+    if len(nameEntry.get())>0 and len(heightEntry.get())>0 and len(weightEntry.get())>0:
+        name_list.append(nameEntry.get())
+        bmi_list.append(calculateBMI())
+        nameEntry.delete(0, tkinter.END)
+        heightEntry.delete(0, tkinter.END)
+        weightEntry.delete(0, tkinter.END)
 
 def showGraph():
     if len(name_list) > 0 and len(bmi_list) > 0:
